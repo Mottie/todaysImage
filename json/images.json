@@ -1,0 +1,98 @@
+{
+ "title": "Images by date example JSON",
+ "link": "http://wowmotty.blogspot.com",
+ "description": "demo images",
+ "modified": "Mar 21 2010",
+ "images": [
+
+  {"dates" : "0", "image" : "images/main1.jpg", "comment": "Hello"},
+  {"dates" : "0", "image" : "images/main2.jpg", "comment": "Hello"},
+  {"dates" : "0", "image" : "images/main3.jpg", "comment": "Hello"},
+  {"dates" : "0", "image" : "images/main4.jpg", "comment": "Hello"},
+  {"dates" : "0", "image" : "images/main5.jpg", "comment": "Hello"},
+  {"dates" : "0", "image" : "images/main6.jpg", "comment": "Hello"},
+
+  {"dates" : "12/31-1/5", "image" : "images/new-year.jpg", "comment": "Happy New Year!"},
+  {"dates" : "12/31-1/5", "image" : "images/NewYear2.jpg", "comment": "Happy New Year!"},
+  {"dates" : "12/31-1/5", "image" : "images/NewYear3.jpg", "comment": "Happy New Year!"},
+  {"dates" : "1/21", "image" : "images/hug.jpg", "comment": "Happy Hug Day!"},
+  {"dates" : "1/21", "image" : "images/squirrel.gif", "comment": "Huggies!"},
+  {"dates" : "1/24", "image" : "images/Laugh.jpg", "comment": "Happy belly laugh day!"},
+
+  {"dates" : "2/10-2/14", "image" : "images/VD1.jpg", "comment": "Happy Valentines!"},
+  {"dates" : "2/10-2/14", "image" : "images/VD2.jpg", "comment": "We <3 you"},
+  {"dates" : "2/10-2/14", "image" : "images/VD3.jpg", "comment": "Luv ya"},
+  {"dates" : "2/10-2/14", "image" : "images/VD4.jpg", "comment": "I think you're sweet"},
+  {"dates" : "2/10-2/14", "image" : "images/VD5.jpg", "comment": "XOXOXO"},
+  {"dates" : "2/10-2/14", "image" : "images/VD6.jpg", "comment": "Happy Valentines!"},
+  {"dates" : "2/3rdMon", "image" : "images/wash1.jpg", "comment": "Washington's Birthday!"},
+  {"dates" : "2/3rdMon", "image" : "images/wash2.jpg", "comment": "Washington's Birthday!"},
+
+  {"dates" : "3/15-3/17", "image" : "images/StPatty.jpg", "comment": "St Patty's"},
+  {"dates" : "3/15-3/17", "image" : "images/patty.jpg", "comment": "Happy St. Patrick's Day!"},
+
+  {"dates" : "4/1", "image" : "images/april-fool-dog.jpg", "comment": "HA HA!"},
+  {"dates" : "4/1", "image" : "images/aprilfools.jpg", "comment": "April Fools"},
+  {"dates" : "4/1", "image" : "images/april_fools1.jpg", "comment": "o.O"},
+
+  {"dates" : "5/5", "image" : "images/cinco1.jpg", "comment": "Happy Cinco de Mayo!"},
+  {"dates" : "5/5", "image" : "images/Cinco4.jpg", "comment": "Happy Cinco de Mayo!"},
+  {"dates" : "5/5", "image" : "images/mayo.jpg", "comment": "Happy Cinco de Mayo!"},
+  {"dates" : "5/5", "image" : "images/mayo2.jpg", "comment": "Happy Cinco de Mayo!"},
+  {"dates" : "5/5", "image" : "images/mayo3.jpg", "comment": "Happy Cinco de Mayo!"},
+  {"dates" : "5/10", "image" : "images/mom1.jpg", "comment": "Happy Mother's Day!"},
+  {"dates" : "5/10", "image" : "images/mom2.jpg", "comment": "Happy Mother's Day!"},
+  {"dates" : "5/10", "image" : "images/mom3.jpg", "comment": "Happy Mother's Day!"},
+  {"dates" : "5/10", "image" : "images/mom4.jpg", "comment": "Happy Mother's Day!"},
+  {"dates" : "5/18", "image" : "images/zombie_cat.jpg", "comment": "Hug a Zombie day"},
+  {"dates" : "5/lastMon", "image" : "images/memorial.jpg", "comment": "Remember..."},
+
+  {"dates" : "6/3rdSun", "image" : "images/fathers1.jpg", "comment": "Happy Father's Day!"},
+  {"dates" : "6/3rdSun", "image" : "images/fathers2.jpg", "comment": "Happy Father's Day!"},
+  {"dates" : "6/3rdSun", "image" : "images/fathers3.jpg", "comment": "Happy Father's Day!"},
+
+  {"dates" : "7/4", "image" : "images/july4.jpg", "comment": "Happy July 4th! (or whatever :P)"},
+  {"dates" : "7/4", "image" : "images/july4-2.jpg", "comment": "Happy Independence Day"},
+  {"dates" : "7/4", "image" : "images/july4-3.jpg", "comment": "Happy <span style='color:red'>Independence</span> Day"},
+  {"dates" : "7/4", "image" : "images/patrioticDog.jpg", "comment": "Happy July 4th!"},
+
+  {"dates" : "7/20-8/20", "image" : "images/summer1.jpg", "comment": "Time for a swim!"},
+  {"dates" : "7/20-8/20", "image" : "images/summer2.jpg", "comment": "Bring the drinks!"},
+  {"dates" : "7/20-8/20", "image" : "images/summer3.jpg", "comment": "Ahhh Summer"},
+  {"dates" : "7/20-8/20", "image" : "images/summer4.jpg", "comment": "Surfs up!"},
+  {"dates" : "7/20-8/20", "image" : "images/summer5.jpg", "comment": "Refreshing"},
+  {"dates" : "7/20-8/20", "image" : "images/summer6.jpg", "comment": "Working on my tan"},
+  {"dates" : "7/20-8/20", "image" : "images/summer7.jpg", "comment": "I caught one this big!"},
+
+  {"dates" : "9/1stMon", "image" : "images/labor.jpg", "comment": "Happy Labor Day"},
+  {"dates" : "9/1stMon", "image" : "images/labor2.jpg", "comment": "Happy Labor Day"},
+  {"dates" : "9/1stMon", "image" : "images/labor3.jpg", "comment": "Happy Labor Day"},
+  {"dates" : "9/19", "image" : "images/pirate1.jpg", "comment": "Talk like a Pirate!"},
+  {"dates" : "9/19", "image" : "images/Pirate2.jpg", "comment": "Arrrrrr, Walk the Plank!"},
+
+  {"dates" : "10/25-10/31", "image" : "images/Halloween1.jpg", "comment": "Ugh Halloween"},
+  {"dates" : "10/25-10/31", "image" : "images/Halloween2.jpg", "comment": "I need better candy!"},
+  {"dates" : "10/25-10/31", "image" : "images/tequilacat.jpg", "comment": "I'm a shot of tequila"},
+  {"dates" : "10/25-10/31", "image" : "images/Oct2.jpg", "comment": "ribbit!"},
+  {"dates" : "10/25-10/31", "image" : "images/Oct3.jpg", "comment": "Are you the joker?"},
+  {"dates" : "10/25-10/31", "image" : "images/Oct4.jpg", "comment": "Time for Pumpkin pie!"},
+  {"dates" : "10/25-10/31", "image" : "images/Oct5.jpg", "comment": "Black cat"},
+
+  {"dates" : "11/11", "image" : "images/patrioticDog.jpg", "comment": "Veteran's Day"},
+  {"dates" : "11/3rdThur-11/4thThur", "image" : "images/thanksgiving1.jpg", "comment": "Happy Thanksgiving"},
+  {"dates" : "11/3rdThur-11/4thThur", "image" : "images/thanksgiving2.jpg", "comment": "Happy Turkey Day"},
+  {"dates" : "11/3rdThur-11/4thThur", "image" : "images/thanksgiving3.jpg", "comment": "Happy Thanksgiving"},
+  {"dates" : "11/3rdThur-11/4thThur", "image" : "images/thanksgiving4.jpg", "comment": "Happy Thanksgiving"},
+
+  {"dates" : "12/5", "image" : "images/ninja.jpg", "comment": "Watch out for Ninjas!"},
+  {"dates" : "12/6-12/30", "image" : "images/Hanukkah1.jpg", "comment": "Happy Hanukkah!"},
+  {"dates" : "12/6-12/30", "image" : "images/Hanukkah2.jpg", "comment": "Happy Hanukkah!"},
+  {"dates" : "12/6-12/30", "image" : "images/Hanukkah3.jpg", "comment": "Happy Hanukkah!"},
+  {"dates" : "12/6-12/30", "image" : "images/christmas.jpg", "comment": "Merry Christmas!"},
+  {"dates" : "12/6-12/30", "image" : "images/christmas2.jpg", "comment": "Merry Christmas!"},
+  {"dates" : "12/6-12/30", "image" : "images/christmas3.jpg", "comment": "Merry Christmas!"},
+  {"dates" : "12/6-12/30", "image" : "images/christmas4.jpg", "comment": "Merry Christmas!"},
+  {"dates" : "12/6-12/30", "image" : "images/christmas5.jpg", "comment": "Merry Christmas!"}
+
+ ]
+}

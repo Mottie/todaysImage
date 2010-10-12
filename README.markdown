@@ -51,4 +51,4 @@ Other
 For more details, see [my blog][1] entry and view [the demo][2] source.
 
   [1]: http://wowmotty.blogspot.com/2010/07/todaysimage-v10.html
-  [2]: http://www.myotherdrive.com/dyn/file/350.412218.04072010.92372.6a64fi/todaysImage-JSON-inline-live.htm
+  [2]: http://mottie.github.com/todaysImage/index.html

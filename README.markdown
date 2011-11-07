@@ -1,4 +1,4 @@
-##**Demos**
+###**Demos**
 
 * [HTML data](http://mottie.github.com/todaysImage/index.html)
 * [Array Demo](http://mottie.github.com/todaysImage/todays-image-array.html)
@@ -6,7 +6,7 @@
 * [Remote JSON (US)](http://mottie.github.com/todaysImage/todays-image-json-remote.html)
 * [Remote JSON (EU)](http://mottie.github.com/todaysImage/todays-image-json-remote-eu.html)
 
-##**Usage** (default settings shown)
+###**Usage** (default settings shown)
 
 ```javascript
 $(function(){
@@ -36,14 +36,14 @@ $(function(){
 });
 ```
 
-##**Data Sources**
+###**Data Sources**
 
 Obtain data from HTML tags/attributes, array or JSON (inline or remote).
 Please refer to my blog for more detailed information on data source setup and targeting with the script
 
-##**Methods**
+###**Methods**
 
-###Get & Set
+####Get & Set
 
 ```javascript
 // Get current image data 
@@ -54,7 +54,7 @@ var current = $(image).data('todaysImage').currentImage(); // returns array ['da
 var current = $(image).data('todaysImage').currentImage(#); // returns array ['dates','image url','comment']
 ```
 
-###Other
+####Other
 
 ```javascript
 // Get the current number of the events that match the date range

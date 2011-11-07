@@ -1,0 +1,56 @@
+body {
+	font: 14px Georgia, Serif;
+	background: #222;
+	color: #ddd;
+	text-align: center;
+	margin: 20px auto;
+}
+
+a, a img {
+	border: 0;
+	text-decoration: none;
+}
+
+/* Navigation */
+#nav {
+	width: 90%;
+	text-align: center;
+	line-height: 3em;
+	margin: 10px auto;
+}
+
+#nav a {
+	text-align: center;
+	background: #000;
+	color: #FFF;
+	white-space: nowrap;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	padding: 10px;
+}
+
+#nav a.git {
+	background: #006;
+}
+
+#nav a.debug, #nav a.random {
+	background: #060;
+}
+
+#nav a.issue {
+	background: #600;
+}
+
+#nav a:hover, #nav a.current {
+	background: #666;
+}
+
+.spacer {
+	height: 15px;
+}
+
+/* hide in line HTML data */
+#myImageList {
+	display: none;
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>todaysImage - HTML inline data</title>
+
+<!-- jQuery -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js"></script>
+
+<!-- Demo -->
+<link href="http://fonts.googleapis.com/css?family=Shadows+Into+Light&v1" rel="stylesheet">
+<link href="demo/demo.css" rel="stylesheet">
+<script src="demo/demo.js"></script>
+
+<!-- todaysImage -->
+<link href="css/todays-image.css" rel="stylesheet">
+<script src="js/jquery.todays-image.js"></script>
+<script>
+$(function(){
+ $.getJSON( 'demo/images-eu.json', function(imageList){
+  $('#todaysImage').todaysImage({
+   locked     : false, // allow debug mode
+   data       : imageList.images,
+   monthFirst : false  // This "EU" version uses the European date format: dd/mm/yyyy
+  });
+ });
+});
+</script>
+
+<body>
+
+	<!-- Links to other demo pages & docs -->
+	<div id="nav">
+		<a href="index.html">HTML inline Demo</a>
+		<a href="todays-image-array.html">Array Demo</a>
+		<a href="todays-image-JSON-inline.html">Inline JSON</a>
+		<a href="todays-image-JSON-remote.html">Remote JSON (US)</a>
+		<a class="current" href="todays-image-JSON-remote-eu.html">Remote JSON (EU)</a>
+		<a class="git" href="https://github.com/Mottie/todaysImage#readme">Documentation</a>
+		<a class="git" href="http://github.com/Mottie/todaysImage/downloads">Download</a>
+		<a class="issue" href="https://github.com/Mottie/todaysImage/issues">Issues</a><br>
+		<div class="spacer"></div>
+		<input class="debug-date" type="date"> <a class="debug" href="#">Test Date</a>
+		<a class="random" href="#">Random</a><br>
+	</div>
+	<!-- End Links -->
+
+<div id="todaysImage"></div>
+
+</body>
+</html>

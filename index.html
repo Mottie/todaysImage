@@ -1,142 +1,153 @@
+<!DOCTYPE html>
 <html>
 <head>
-<title>todaysImage demo - HTML data</title>
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
-<script type="text/javascript" src="js/jquery.todaysImage.min.js"></script>
+<meta charset="utf-8">
+<title>todaysImage - HTML inline data</title>
 
-<style type="text/css">
-body { background: #250d4d; color: #ddd; margin: 20px auto; text-align: center; }
-img { margin: 0 auto; }
-#myImageList { display: none; }
+<!-- jQuery -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js"></script>
 
-#debugWrap img { width: 100px; height: 100px; }
-</style>
+<!-- Demo -->
+<link href="http://fonts.googleapis.com/css?family=Shadows+Into+Light&v1" rel="stylesheet">
+<link href="demo/demo.css" rel="stylesheet">
+<script src="demo/demo.js"></script>
 
-<script type="text/javascript">
-$(document).ready(function(){
+<!-- todaysImage -->
+<link href="css/todays-image.css" rel="stylesheet">
+<script src="js/jquery.todays-image.js"></script>
+<script>
+$(function(){
  $('#todaysImage').todaysImage({
+  locked     : false, // allow debug mode
   data       : $('#myImageList li'),
-  dataObject : ['rel', 'title', 'html'], // must be in order: [date, url, comment]
-  debugElement : '#debugWrap'
+  dataObject : ['data-date', 'data-url', 'html'] // must be in order: [date, url, comment]
  });
-})
+});
 </script>
 
 <body>
 
-<img id="todaysImage" src="" alt="">
+	<!-- Links to other demo pages & docs -->
+	<div id="nav">
+		<a class="current" href="index.html">HTML inline Demo</a>
+		<a href="todays-image-array.html">Array Demo</a>
+		<a href="todays-image-JSON-inline.html">Inline JSON</a>
+		<a href="todays-image-JSON-remote.html">Remote JSON (US)</a>
+		<a href="todays-image-JSON-remote-eu.html">Remote JSON (EU)</a>
+		<a class="git" href="https://github.com/Mottie/todaysImage#readme">Documentation</a>
+		<a class="git" href="http://github.com/Mottie/todaysImage/downloads">Download</a>
+		<a class="issue" href="https://github.com/Mottie/todaysImage/issues">Issues</a><br>
+		<div class="spacer"></div>
+		<input class="debug-date" type="date"> <a class="debug" href="#">Test Date</a>
+		<a class="random" href="#">Random</a><br>
+	</div>
+	<!-- End Links -->
 
-<!-- optional elements -->
-<!-- comments added in div below, set the class name during script initialization -->
-<div style="text-align: center;" class="imageComment"></div>
+<div id="todaysImage"></div>
 
-<!-- all debug data/images will be added to the div below, set the id during script initialization -->
-<div id="debugWrap"></div>
-<!-- end optional elements -->
-
-<!-- image list stored in HTML -->
+<!-- image list stored in HTML; hidden using css -->
 <ul id="myImageList">
  /* Default images (these display if no images are found to display for today) */
- <li rel="0" title="images/main1.jpg">Hello</li>
- <li rel="0" title="images/main2.jpg">Hello</li>
- <li rel="0" title="images/main3.jpg">Hello</li>
- <li rel="0" title="images/main4.jpg">Hello</li>
- <li rel="0" title="images/main5.jpg">Hello</li>
- <li rel="0" title="images/main6.jpg">Hello</li>
+ <li data-date="0" data-url="demo/images/main1.jpg">Hello</li>
+ <li data-date="0" data-url="demo/images/main2.jpg">Hello</li>
+ <li data-date="0" data-url="demo/images/main3.jpg">Hello</li>
+ <li data-date="0" data-url="demo/images/main4.jpg">Hello</li>
+ <li data-date="0" data-url="demo/images/main5.jpg">Hello</li>
+ <li data-date="0" data-url="demo/images/main6.jpg">Hello</li>
 
  /* Jan */
- <li rel="12/31-1/5" title="images/new-year.jpg">Happy New Year!</li>
- <li rel="12/31-1/5" title="images/NewYear2.jpg">Happy New Year!</li>
- <li rel="12/31-1/5" title="images/NewYear3.jpg">Happy New Year!</li>
- <li rel="1/21" title="images/hug.jpg">Happy Hug Day!</li>
- <li rel="1/21" title="images/squirrel.gif">Huggies!</li>
- <li rel="1/24" title="images/Laugh.jpg">Happy belly laugh day!</li>
+ <li data-date="12/31-1/5" data-url="demo/images/new-year.jpg">Happy New Year!</li>
+ <li data-date="12/31-1/5" data-url="demo/images/NewYear2.jpg">Happy New Year!</li>
+ <li data-date="12/31-1/5" data-url="demo/images/NewYear3.jpg">Happy New Year!</li>
+ <li data-date="1/21" data-url="demo/images/hug.jpg">Happy Hug Day!</li>
+ <li data-date="1/21" data-url="demo/images/squirrel.gif">Huggies!</li>
+ <li data-date="1/24" data-url="demo/images/Laugh.jpg">Happy belly laugh day!</li>
 
  /* Feb */
- <li rel="2/10-2/14" title="images/VD1.jpg">Happy Valentines!</li>
- <li rel="2/10-2/14" title="images/VD2.jpg">We <3 you</li>
- <li rel="2/10-2/14" title="images/VD3.jpg">Luv ya</li>
- <li rel="2/10-2/14" title="images/VD4.jpg">I think you're sweet</li>
- <li rel="2/10-2/14" title="images/VD5.jpg">XOXOXO</li>
- <li rel="2/10-2/14" title="images/VD6.jpg">Happy Valentines!</li>
- <li rel="2/3rdMon" title="images/wash1.jpg">Washington's Birthday!</li>
- <li rel="2/3rdMon" title="images/wash2.jpg">Washington's Birthday!</li>
+ <li data-date="2/10-2/14" data-url="demo/images/VD1.jpg">Happy Valentines!</li>
+ <li data-date="2/10-2/14" data-url="demo/images/VD2.jpg">We <3 you</li>
+ <li data-date="2/10-2/14" data-url="demo/images/VD3.jpg">Luv ya</li>
+ <li data-date="2/10-2/14" data-url="demo/images/VD4.jpg">I think you're sweet</li>
+ <li data-date="2/10-2/14" data-url="demo/images/VD5.jpg">XOXOXO</li>
+ <li data-date="2/10-2/14" data-url="demo/images/VD6.jpg">Happy Valentines!</li>
+ <li data-date="2/3rdMon" data-url="demo/images/wash1.jpg">Washington's Birthday!</li>
+ <li data-date="2/3rdMon" data-url="demo/images/wash2.jpg">Washington's Birthday!</li>
 
  /* Mar */
- <li rel="3/15-3/17" title="images/StPatty.jpg">St Patty's</li>
- <li rel="3/15-3/17" title="images/patty.jpg">Happy St. Patrick's Day!</li>
+ <li data-date="3/15-3/17" data-url="demo/images/StPatty.jpg">St Patty's</li>
+ <li data-date="3/15-3/17" data-url="demo/images/patty.jpg">Happy St. Patrick's Day!</li>
 
  /* April */
- <li rel="4/1" title="images/april-fool-dog.jpg">HA HA!</li>
- <li rel="4/1" title="images/aprilfools.jpg">April Fools</li>
- <li rel="4/1" title="images/april_fools1.jpg">o.O</li>
+ <li data-date="4/1" data-url="demo/images/april-fool-dog.jpg">HA HA!</li>
+ <li data-date="4/1" data-url="demo/images/aprilfools.jpg">April Fools</li>
+ <li data-date="4/1" data-url="demo/images/april_fools1.jpg">o.O</li>
 
  /* May */
- <li rel="5/5" title="images/cinco1.jpg">Happy Cinco de Mayo!</li>
- <li rel="5/5" title="images/Cinco4.jpg">Happy Cinco de Mayo!</li>
- <li rel="5/5" title="images/mayo.jpg">Happy Cinco de Mayo!</li>
- <li rel="5/5" title="images/mayo2.jpg">Happy Cinco de Mayo!</li>
- <li rel="5/5" title="images/mayo3.jpg">Happy Cinco de Mayo!</li>
- <li rel="5/10" title="images/mom1.jpg">Happy Mother's Day!</li>
- <li rel="5/10" title="images/mom2.jpg">Happy Mother's Day!</li>
- <li rel="5/10" title="images/mom3.jpg">Happy Mother's Day!</li>
- <li rel="5/10" title="images/mom4.jpg">Happy Mother's Day!</li>
- <li rel="5/18" title="images/zombie_cat.jpg">Hug a Zombie day</li>
- <li rel="5/lastMon" title="images/memorial.jpg">Remember...</li>
+ <li data-date="5/5" data-url="demo/images/cinco1.jpg">Happy Cinco de Mayo!</li>
+ <li data-date="5/5" data-url="demo/images/Cinco4.jpg">Happy Cinco de Mayo!</li>
+ <li data-date="5/5" data-url="demo/images/mayo.jpg">Happy Cinco de Mayo!</li>
+ <li data-date="5/5" data-url="demo/images/mayo2.jpg">Happy Cinco de Mayo!</li>
+ <li data-date="5/5" data-url="demo/images/mayo3.jpg">Happy Cinco de Mayo!</li>
+ <li data-date="5/10" data-url="demo/images/mom1.jpg">Happy Mother's Day!</li>
+ <li data-date="5/10" data-url="demo/images/mom2.jpg">Happy Mother's Day!</li>
+ <li data-date="5/10" data-url="demo/images/mom3.jpg">Happy Mother's Day!</li>
+ <li data-date="5/10" data-url="demo/images/mom4.jpg">Happy Mother's Day!</li>
+ <li data-date="5/18" data-url="demo/images/zombie_cat.jpg">Hug a Zombie day</li>
+ <li data-date="5/lastMon" data-url="demo/images/memorial.jpg">Remember...</li>
 
  /* Jun */
- <li rel="6/3rdSun" title="images/fathers1.jpg">Happy Father's Day!</li>
- <li rel="6/3rdSun" title="images/fathers2.jpg">Happy Father's Day!</li>
- <li rel="6/3rdSun" title="images/fathers3.jpg">Happy Father's Day!</li>
+ <li data-date="6/3rdSun" data-url="demo/images/fathers1.jpg">Happy Father's Day!</li>
+ <li data-date="6/3rdSun" data-url="demo/images/fathers2.jpg">Happy Father's Day!</li>
+ <li data-date="6/3rdSun" data-url="demo/images/fathers3.jpg">Happy Father's Day!</li>
 
  /* Jul */
- <li rel="7/4" title="images/july4.jpg">Happy July 4th! (or whatever :P)</li>
- <li rel="7/4" title="images/july4-2.jpg">Happy Independence Day</li>
- <li rel="7/4" title="images/july4-3.jpg">Happy <span style="color:red">Independence</span> Day</li>
- <li rel="7/4" title="images/patrioticDog.jpg">Happy July 4th!</li>
+ <li data-date="7/4" data-url="demo/images/july4.jpg">Happy July 4th! (or whatever :P)</li>
+ <li data-date="7/4" data-url="demo/images/july4-2.jpg">Happy Independence Day</li>
+ <li data-date="7/4" data-url="demo/images/july4-3.jpg">Happy <span style="color:red">Independence</span> Day</li>
+ <li data-date="7/4" data-url="demo/images/patrioticDog.jpg">Happy July 4th!</li>
 
  /* Aug */
- <li rel="7/20-8/20" title="images/summer1.jpg">Time for a swim!</li>
- <li rel="7/20-8/20" title="images/summer2.jpg">Bring the drinks!</li>
- <li rel="7/20-8/20" title="images/summer3.jpg">Ahhh Summer</li>
- <li rel="7/20-8/20" title="images/summer4.jpg">Surfs up!</li>
- <li rel="7/20-8/20" title="images/summer5.jpg">Refreshing</li>
- <li rel="7/20-8/20" title="images/summer6.jpg">Working on my tan</li>
- <li rel="7/20-8/20" title="images/summer7.jpg">I caught one this big!</li>
+ <li data-date="7/20-8/20" data-url="demo/images/summer1.jpg">Time for a swim!</li>
+ <li data-date="7/20-8/20" data-url="demo/images/summer2.jpg">Bring the drinks!</li>
+ <li data-date="7/20-8/20" data-url="demo/images/summer3.jpg">Ahhh Summer</li>
+ <li data-date="7/20-8/20" data-url="demo/images/summer4.jpg">Surfs up!</li>
+ <li data-date="7/20-8/20" data-url="demo/images/summer5.jpg">Refreshing</li>
+ <li data-date="7/20-8/20" data-url="demo/images/summer6.jpg">Working on my tan</li>
+ <li data-date="7/20-8/20" data-url="demo/images/summer7.jpg">I caught one this big!</li>
 
  /* Sep */
- <li rel="9/1stMon" title="images/labor.jpg">Happy Labor Day</li>
- <li rel="9/1stMon" title="images/labor2.jpg">Happy Labor Day</li>
- <li rel="9/1stMon" title="images/labor3.jpg">Happy Labor Day</li>
- <li rel="9/19" title="images/pirate1.jpg">Talk like a Pirate!</li>
- <li rel="9/19" title="images/Pirate2.jpg">Arrrrrr, Walk the Plank!</li>
+ <li data-date="9/1stMon" data-url="demo/images/labor.jpg">Happy Labor Day</li>
+ <li data-date="9/1stMon" data-url="demo/images/labor2.jpg">Happy Labor Day</li>
+ <li data-date="9/1stMon" data-url="demo/images/labor3.jpg">Happy Labor Day</li>
+ <li data-date="9/19" data-url="demo/images/pirate1.jpg">Talk like a Pirate!</li>
+ <li data-date="9/19" data-url="demo/images/Pirate2.jpg">Arrrrrr, Walk the Plank!</li>
 
  /* Oct */
- <li rel="10/25-10/31" title="images/Halloween1.jpg">Ugh Halloween</li>
- <li rel="10/25-10/31" title="images/Halloween2.jpg">I need better candy!</li>
- <li rel="10/25-10/31" title="images/tequilacat.jpg">I'm a shot of tequila</li>
- <li rel="10/25-10/31" title="images/Oct2.jpg">ribbit!</li>
- <li rel="10/25-10/31" title="images/Oct3.jpg">Are you the joker?</li>
- <li rel="10/25-10/31" title="images/Oct4.jpg">Time for Pumpkin pie!</li>
- <li rel="10/25-10/31" title="images/Oct5.jpg">Black cat</li>
+ <li data-date="10/25-10/31" data-url="demo/images/Halloween1.jpg">Ugh Halloween</li>
+ <li data-date="10/25-10/31" data-url="demo/images/Halloween2.jpg">I need better candy!</li>
+ <li data-date="10/25-10/31" data-url="demo/images/tequilacat.jpg">I'm a shot of tequila</li>
+ <li data-date="10/25-10/31" data-url="demo/images/Oct2.jpg">ribbit!</li>
+ <li data-date="10/25-10/31" data-url="demo/images/Oct3.jpg">Are you the joker?</li>
+ <li data-date="10/25-10/31" data-url="demo/images/Oct4.jpg">Time for Pumpkin pie!</li>
+ <li data-date="10/25-10/31" data-url="demo/images/Oct5.jpg">Black cat</li>
 
  /* Nov */
- <li rel="11/11" title="images/patrioticDog.jpg">Veteran's Day</li>
- <li rel="11/3rdThur-11/4thThur" title="images/thanksgiving1.jpg">Happy Thanksgiving</li>
- <li rel="11/3rdThur-11/4thThur" title="images/thanksgiving2.jpg">Happy Turkey Day</li>
- <li rel="11/3rdThur-11/4thThur" title="images/thanksgiving3.jpg">Happy Thanksgiving</li>
- <li rel="11/3rdThur-11/4thThur" title="images/thanksgiving4.jpg">Happy Thanksgiving</li>
+ <li data-date="11/11" data-url="demo/images/patrioticDog.jpg">Veteran's Day</li>
+ <li data-date="11/3rdThur-11/4thThur" data-url="demo/images/thanksgiving1.jpg">Happy Thanksgiving</li>
+ <li data-date="11/3rdThur-11/4thThur" data-url="demo/images/thanksgiving2.jpg">Happy Turkey Day</li>
+ <li data-date="11/3rdThur-11/4thThur" data-url="demo/images/thanksgiving3.jpg">Happy Thanksgiving</li>
+ <li data-date="11/3rdThur-11/4thThur" data-url="demo/images/thanksgiving4.jpg">Happy Thanksgiving</li>
 
  /* Dec */
- <li rel="12/5" title="images/ninja.jpg">Watch out for Ninjas!</li>
- <li rel="12/2-12/30" title="images/Hanukkah1.jpg">Happy Hanukkah!</li>
- <li rel="12/2-12/30" title="images/Hanukkah2.jpg">Happy Hanukkah!</li>
- <li rel="12/2-12/30" title="images/Hanukkah3.jpg">Happy Hanukkah!</li>
- <li rel="12/2-12/30" title="images/christmas.jpg">Merry Christmas!</li>
- <li rel="12/2-12/30" title="images/christmas2.jpg">Merry Christmas!</li>
- <li rel="12/2-12/30" title="images/christmas3.jpg">Merry Christmas!</li>
- <li rel="12/2-12/30" title="images/christmas4.jpg">Merry Christmas!</li>
- <li rel="12/2-12/30" title="images/christmas5.jpg">Merry Christmas!</li>
+ <li data-date="12/5" data-url="demo/images/ninja.jpg">Watch out for Ninjas!</li>
+ <li data-date="12/2-12/30" data-url="demo/images/Hanukkah1.jpg">Happy Hanukkah!</li>
+ <li data-date="12/2-12/30" data-url="demo/images/Hanukkah2.jpg">Happy Hanukkah!</li>
+ <li data-date="12/2-12/30" data-url="demo/images/Hanukkah3.jpg">Happy Hanukkah!</li>
+ <li data-date="12/2-12/30" data-url="demo/images/christmas.jpg">Merry Christmas!</li>
+ <li data-date="12/2-12/30" data-url="demo/images/christmas2.jpg">Merry Christmas!</li>
+ <li data-date="12/2-12/30" data-url="demo/images/christmas3.jpg">Merry Christmas!</li>
+ <li data-date="12/2-12/30" data-url="demo/images/christmas4.jpg">Merry Christmas!</li>
+ <li data-date="12/2-12/30" data-url="demo/images/christmas5.jpg">Merry Christmas!</li>
 </ul>
 
 </body>

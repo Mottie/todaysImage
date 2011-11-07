@@ -1,0 +1,26 @@
+/* Image position */
+#todaysImage {
+	text-align: center;
+}
+
+/* Comment styling */
+#todaysImage .comment {
+	font-size: 60px;
+	font-family: "Shadows Into Light", arial, serif;
+	margin: 0;
+}
+
+/* Debug mode styling */
+#todaysimage-debug img {
+	height: 100px;
+	width: 100px;
+}
+
+#todaysimage-debug .inRange {
+	color: #080;
+}
+
+#todaysimage-debug .notInRange {
+	color: #f00;
+}
+

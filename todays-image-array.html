@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>todaysImage - HTML inline data</title>
+
+<!-- jQuery -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js"></script>
+
+<!-- Demo -->
+<link href="http://fonts.googleapis.com/css?family=Shadows+Into+Light&v1" rel="stylesheet">
+<link href="demo/demo.css" rel="stylesheet">
+<script src="demo/demo.js"></script>
+
+<!-- todaysImage -->
+<link href="css/todays-image.css" rel="stylesheet">
+<script src="js/jquery.todays-image.js"></script>
+<script>
+$(function(){
+
+ // Array of data
+ var events = [];
+
+ /* Default images (these display if no images are found to display for today) */
+ events.push(["0","demo/images/main1.jpg","Hello"]);
+ events.push(["0","demo/images/main2.jpg","Hello"]);
+ events.push(["0","demo/images/main3.jpg","Hello"]);
+ events.push(["0","demo/images/main4.jpg","Hello"]);
+ events.push(["0","demo/images/main5.jpg","Hello"]);
+ events.push(["0","demo/images/main6.jpg","Hello"]);
+ 
+ /* Jan */
+ events.push(["12/31-1/5","demo/images/new-year.jpg","Happy New Year!"]);
+ events.push(["12/31-1/5","demo/images/NewYear2.jpg","Happy New Year!"]);
+ events.push(["12/31-1/5","demo/images/NewYear3.jpg","Happy New Year!"]);
+ events.push(["1/21","demo/images/hug.jpg","Happy Hug Day!"]);
+ events.push(["1/21","demo/images/squirrel.gif","Huggies!"]);
+ events.push(["1/24","demo/images/Laugh.jpg","Happy belly laugh day!"]);
+ 
+ /* Feb */
+ events.push(["2/10-2/14","demo/images/VD1.jpg","Happy Valentines!"]);
+ events.push(["2/10-2/14","demo/images/VD2.jpg","We <3 you"]);
+ events.push(["2/10-2/14","demo/images/VD3.jpg","Luv ya"]);
+ events.push(["2/10-2/14","demo/images/VD4.jpg","I think you're sweet"]);
+ events.push(["2/10-2/14","demo/images/VD5.jpg","XOXOXO"]);
+ events.push(["2/10-2/14","demo/images/VD6.jpg","Happy Valentines!"]);
+ events.push(["2/3rdMon","demo/images/wash1.jpg","Washington's Birthday!"]);
+ events.push(["2/3rdMon","demo/images/wash2.jpg","Washington's Birthday!"]);
+ 
+ /* Mar */
+ events.push(["3/15-3/17","demo/images/StPatty.jpg","St Patty's"]);
+ events.push(["3/15-3/17","demo/images/patty.jpg","Happy St. Patrick's Day!"]);
+ 
+ /* April */
+ events.push(["4/1","demo/images/april-fool-dog.jpg","HA HA!"]);
+ events.push(["4/1","demo/images/aprilfools.jpg","April Fools"]);
+ events.push(["4/1","demo/images/april_fools1.jpg","o.O"]);
+ 
+ /* May */
+ events.push(["5/5","demo/images/cinco1.jpg","Happy Cinco de Mayo!"]);
+ events.push(["5/5","demo/images/Cinco4.jpg","Happy Cinco de Mayo!"]);
+ events.push(["5/5","demo/images/mayo.jpg","Happy Cinco de Mayo!"]);
+ events.push(["5/5","demo/images/mayo2.jpg","Happy Cinco de Mayo!"]);
+ events.push(["5/5","demo/images/mayo3.jpg","Happy Cinco de Mayo!"]);
+ events.push(["5/10","demo/images/mom1.jpg","Happy Mother's Day!"]);
+ events.push(["5/10","demo/images/mom2.jpg","Happy Mother's Day!"]);
+ events.push(["5/10","demo/images/mom3.jpg","Happy Mother's Day!"]);
+ events.push(["5/10","demo/images/mom4.jpg","Happy Mother's Day!"]);
+ events.push(["5/18","demo/images/zombie_cat.jpg","Hug a Zombie day"]);
+ events.push(["5/lastMon","demo/images/memorial.jpg","Remember..."]);
+ 
+ /* Jun */
+ events.push(["6/3rdSun","demo/images/fathers1.jpg","Happy Father's Day!"]);
+ events.push(["6/3rdSun","demo/images/fathers2.jpg","Happy Father's Day!"]);
+ events.push(["6/3rdSun","demo/images/fathers3.jpg","Happy Father's Day!"]);
+ 
+ /* Jul */
+ events.push(["7/4","demo/images/july4.jpg","Happy July 4th! (or whatever :P)"]);
+ events.push(["7/4","demo/images/july4-2.jpg","Happy Independence Day"]);
+ events.push(["7/4","demo/images/july4-3.jpg","Happy <span style='color:red'>Independence</span> Day"]);
+ events.push(["7/4","demo/images/patrioticDog.jpg","Happy July 4th!"]);
+ 
+ /* Aug */
+ events.push(["7/20-8/20","demo/images/summer1.jpg","Time for a swim!"]);
+ events.push(["7/20-8/20","demo/images/summer2.jpg","Bring the drinks!"]);
+ events.push(["7/20-8/20","demo/images/summer3.jpg","Ahhh Summer"]);
+ events.push(["7/20-8/20","demo/images/summer4.jpg","Surfs up!"]);
+ events.push(["7/20-8/20","demo/images/summer5.jpg","Refreshing"]);
+ events.push(["7/20-8/20","demo/images/summer6.jpg","Working on my tan"]);
+ events.push(["7/20-8/20","demo/images/summer7.jpg","I caught one this big!"]);
+ 
+ /* Sep */
+ events.push(["9/1stMon","demo/images/labor.jpg","Happy Labor Day"]);
+ events.push(["9/1stMon","demo/images/labor2.jpg","Happy Labor Day"]);
+ events.push(["9/1stMon","demo/images/labor3.jpg","Happy Labor Day"]);
+ events.push(["9/19","demo/images/pirate1.jpg","Talk like a Pirate!"]);
+ events.push(["9/19","demo/images/Pirate2.jpg","Arrrrrr, Walk the Plank!"]);
+ 
+ /* Oct */
+ events.push(["10/25-10/31","demo/images/Halloween1.jpg","Ugh Halloween"]);
+ events.push(["10/25-10/31","demo/images/Halloween2.jpg","I need better candy!"]);
+ events.push(["10/25-10/31","demo/images/tequilacat.jpg","I'm a shot of tequila"]);
+ events.push(["10/25-10/31","demo/images/Oct2.jpg","ribbit!"]);
+ events.push(["10/25-10/31","demo/images/Oct3.jpg","Are you the joker?"]);
+ events.push(["10/25-10/31","demo/images/Oct4.jpg","Time for Pumpkin pie!"]);
+ events.push(["10/25-10/31","demo/images/Oct5.jpg","Black cat"]);
+ 
+ /* Nov */
+ events.push(["11/11","demo/images/patrioticDog.jpg","Veteran's Day"]);
+ events.push(["11/3rdThur-11/4thThur","demo/images/thanksgiving1.jpg","Happy Thanksgiving"]);
+ events.push(["11/3rdThur-11/4thThur","demo/images/thanksgiving2.jpg","Happy Turkey Day"]);
+ events.push(["11/3rdThur-11/4thThur","demo/images/thanksgiving3.jpg","Happy Thanksgiving"]);
+ events.push(["11/3rdThur-11/4thThur","demo/images/thanksgiving4.jpg","Happy Thanksgiving"]);
+ 
+ /* Dec */
+ events.push(["12/5","demo/images/ninja.jpg","Watch out for Ninjas!"]);
+ events.push(["12/2-12/25","demo/images/Hanukkah1.jpg","Happy Hanukkah!"]);
+ events.push(["12/2-12/25","demo/images/Hanukkah2.jpg","Happy Hanukkah!"]);
+ events.push(["12/2-12/25","demo/images/Hanukkah3.jpg","Happy Hanukkah!"]);
+ events.push(["12/15-12/30","demo/images/christmas.jpg","Merry Christmas!"]);
+ events.push(["12/15-12/30","demo/images/christmas2.jpg","Merry Christmas!"]);
+ events.push(["12/15-12/30","demo/images/christmas3.jpg","Merry Christmas!"]);
+ events.push(["12/15-12/30","demo/images/christmas4.jpg","Merry Christmas!"]);
+ events.push(["12/15-12/30","demo/images/christmas5.jpg","Merry Christmas!"]);
+ 
+ $('#todaysImage').todaysImage({
+  locked     : false,  // allow debug mode
+  data       : events, // image array
+  dataObject : [0,1,2] // image order ['dates', 'image url', 'comment' ]
+ });
+});
+</script>
+<body>
+
+	<!-- Links to other demo pages & docs -->
+	<div id="nav">
+		<a href="index.html">HTML inline Demo</a>
+		<a class="current" href="todays-image-array.html">Array Demo</a>
+		<a href="todays-image-JSON-inline.html">Inline JSON</a>
+		<a href="todays-image-JSON-remote.html">Remote JSON (US)</a>
+		<a href="todays-image-JSON-remote-eu.html">Remote JSON (EU)</a>
+		<a class="git" href="https://github.com/Mottie/todaysImage#readme">Documentation</a>
+		<a class="git" href="http://github.com/Mottie/todaysImage/downloads">Download</a>
+		<a class="issue" href="https://github.com/Mottie/todaysImage/issues">Issues</a><br>
+		<div class="spacer"></div>
+		<input class="debug-date" type="date"> <a class="debug" href="#">Test Date</a>
+		<a class="random" href="#">Random</a><br>
+	</div>
+	<!-- End Links -->
+
+<div id="todaysImage"></div>
+
+</body>
+</html>

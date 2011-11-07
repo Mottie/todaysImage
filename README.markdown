@@ -67,7 +67,7 @@ var current = $(image).data('todaysImage').randomImage();
 $(image).data('todaysImage').showAll();
 ```
 
-###Change Log
+###**Change Log**
 
 ####Version 1.1
 

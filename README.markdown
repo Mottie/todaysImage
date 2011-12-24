@@ -12,26 +12,26 @@
 $(function(){
  $('#todaysImage').todaysImage({
   // Data
-  data         : '', // data object: array, json or jquery object array
+  data        : '', // data object: array, json or jquery object array
 
   // dataObject contains the date, image and comment names as seen in the data
   // (key names in JSON, or if the object is an array, use the index [0,1,2])
   // The data object order must always be: 'dates', 'image url' and 'comment'
-  dataObject   : ['dates','image','comment'],
+  dataObject  : ['dates','image','comment'],
 
   // content added to the target element
-  content      : '<img src="{url}" title="{comment}" alt="{url}"><p class="comment">{comment}</p>',
+  content     : '<img src="{url}" title="{comment}" alt="{url}"><p class="comment">{comment}</p>',
 
   // language options
-  dayEndings : 'st|nd|rd|th',                               // 1st, 2nd, 3rd, 4th, etc. (e.g. 1stMon & 3rdThu)
-  dayLast    : 'last',                                      // last weekday/weekend of the month
-  dayWeek    : ['sun','mon','tue','wed','thu','fri','sat'], // days of the week (case insensitive)
-  monthFirst : true,                                        // true: U.S. date format mm/dd/yy, if false: dd/mm/yy format applied
+  dayEndings  : 'st|nd|rd|th',                               // 1st, 2nd, 3rd, 4th, etc. (e.g. 1stMon & 3rdThu)
+  dayLast     : 'last',                                      // last weekday/weekend of the month
+  dayWeek     : ['sun','mon','tue','wed','thu','fri','sat'], // days of the week (case insensitive)
+  monthFirst  : true,                                        // true: U.S. date format mm/dd/yy, if false: dd/mm/yy format applied
 
   // debugging options
-  locked          : true,       // prevent debug mode onscreen output if true (debug setting from browser URL only).
-  debug           : false,      // set debug mode.
-  defaultDate     : '12/25/2011', // date used if setting debug mode but no default date.
+  locked      : true,        // prevent debug mode onscreen output if true (debug setting from browser URL only).
+  debug       : false,       // set debug mode.
+  defaultDate : '12/25/2011' // date used if setting debug mode but no default date.
  });
 });
 ```
@@ -39,7 +39,7 @@ $(function(){
 ###**Data Sources**
 
 Obtain data from HTML tags/attributes, array or JSON (inline or remote).
-Please refer to my blog for more detailed information on data source setup and targeting with the script
+Please refer to the demo source or [my blog post](http://wowmotty.blogspot.com/2010/07/todaysimage-v10.html) for more detailed information on data source setup and targeting with the script
 
 ###**Methods**
 
@@ -51,7 +51,7 @@ Please refer to my blog for more detailed information on data source setup and t
 var current = $(image).data('todaysImage').currentImage(); // returns array ['dates','image url','comment']
 
 // Get/Set current image from events within the date range
-var current = $(image).data('todaysImage').currentImage(#); // returns array ['dates','image url','comment']
+var current = $(image).data('todaysImage').currentImage(1); // returns array ['dates','image url','comment']
 ```
 
 ####Other
@@ -68,6 +68,14 @@ $(image).data('todaysImage').showAll();
 ```
 
 ###**Change Log**
+
+####Version 1.1.1
+
+* Updated to allow adding a specific date.
+  * Previously, the year at the end of the date would be ignored since it assumed the event would be repeated yearly. Now any event with a specific year will only be shown during that year.
+  * Set a single date: "1/18/2012".
+  * Or a date range: "2/18/2012-2/19/2012".
+* Removed GPLv3 from plugin licenses. This plugin is now only under an MIT license.
 
 ####Version 1.1
 

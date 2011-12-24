@@ -1,0 +1,29 @@
+﻿{
+    "name": "todaysImage",
+    "version": "1.1.1",
+    "title": "todaysImage",
+    "author": {
+        "name": "Rob Garrison",
+        "url": "https://github.com/Mottie"
+    },
+    "licenses": [
+        {
+            "type": "MIT",
+            "url": "http://www.opensource.org/licenses/mit-license.php"
+        }
+    ],
+    "dependencies": {
+        "jquery": ">=1.2.6"
+    },
+    "description": "This plugin will process data from a group of images each of which have a set date range, and show an image with caption randomly from that group depending on the current date.",
+    "keywords": [
+        "images",
+        "date"
+    ],
+    "homepage": "http://wowmotty.blogspot.com/2010/07/todaysimage-v10.html",
+    "files": [
+        "css/todays-image.css",
+        "js/jquery.todays-image.js",
+        "js/jquery.todays-image.min.js"
+    ]
+}

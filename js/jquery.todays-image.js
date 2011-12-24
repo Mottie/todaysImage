@@ -1,7 +1,7 @@
 /*
-	todaysImage v1.1
+	todaysImage v1.1.1 (https://github.com/Mottie/todaysImage)
 	By Rob Garrison (aka Mottie & Fudgey)
-	Dual licensed under the MIT and GPL licenses.
+	Licensed under the MIT license.
 
 	This plugin allows you to set up a list of images with a date range, it will then
 	randomly choose an image from the list that falls within today's date and display it.
@@ -11,17 +11,13 @@
 	$.todaysImage = function(el, options){
 		var base = this, o;
 
-		// Access to jQuery and DOM versions of element
 		base.el = el;
 		base.$el = $(el);
-
-		// Add a reverse reference to the DOM object
 		base.$el.data("todaysImage", base);
 
 		base.init = function(){
 			base.options = o = $.extend({}, $.todaysImage.defaultOptions, options);
 
-			// initialization code
 			var tmp, t,
 				date = (o.debug) ? new Date(o.defaultDate) : new Date(); // debug date or today
 			base.today = {
@@ -50,7 +46,12 @@
 				tmp = t.match(/^#debug:(0?[1|2]\d{3})[\-\/.](0?[1-9]|1[0,1,2])[\-\/.]([1-9]|[0][1-9]|[1,2][0-9]|3[0,1])$/);
 				if (tmp){ base.today = { m: tmp[2], d: tmp[3], y: tmp[1] }; }
 
+				// this fixes a bug in the last version 
+				base.today.d = parseInt(base.today.d, 10);
+				base.today.m = parseInt(base.today.m, 10);
+				base.today.y = parseInt(base.today.y, 10);
 			}
+
 			if (o.debug){
 				// add debug element if not present
 				if (!base.debug) {
@@ -80,15 +81,18 @@
 
 			// Cycle through all dates to find the ones in the date range
 			$.each(o.data, function(j){
-				var beg, end,
+				var beg, end, yr,
 					datestr = (o.data[j][o.dataObject[0]]).replace(/\s/,''),
 					// us vs eu date format
 					m = (o.monthFirst) ? 0 : 1,
 					d = (o.monthFirst) ? 1 : 0,
 					// example datestr = "1/1-1/10" or "9/1stMon-9/1stWed" for US date format
 					dates = datestr.split('-'),
-					tMonthStartStr = parseInt(dates[0].split('/')[m],10),
-					tMonthEndStr = (typeof(dates[1])=== "undefined") ? tMonthStartStr : parseInt(dates[1].split('/')[m],10);
+					d1 = dates[0].split('/'),
+					tMonthStartStr = parseInt(d1[m],10),
+					tMonthEndStr = (typeof(dates[1])=== "undefined") ? tMonthStartStr : parseInt(dates[1].split('/')[m],10),
+					tYearStr = parseInt(d1[2],10) || base.today.y;
+					if (tYearStr < 100) { tYearStr += 2000; } // assume two digit year should have 2000 added
 					// if the date range crosses months or years, figure out if we are in range, then just set the month to now
 				if ( (tMonthStartStr > tMonthEndStr) && (base.today.m >= tMonthStartStr || base.today.m <= tMonthEndStr) ) {
 					tMonthStartStr = (tMonthStartStr === base.today.m) ? base.today.m : base.today.m - 1;
@@ -100,7 +104,7 @@
 				if ( tMonthStartStr <= base.today.m && tMonthEndStr >= base.today.m ) {
 					beg = base.extractDay( (dates[0]).split('/')[d] );
 					// if end date is undefined, set it to beginning date
-					base.today.y = (base.endsNextYear) ? base.today.y + 1 : base.today.y;
+					yr = (base.endsNextYear) ? base.today.y + 1 : base.today.y;
 					end = (typeof(dates[1]) === "undefined") ? beg : base.extractDay( (dates[1]).split('/')[d] );
 					// set day for 1st of this month, if start date was prior to this month
 					if ( tMonthStartStr < base.today.m ) { beg = 1; }
@@ -110,7 +114,7 @@
 						tmp = (o.monthFirst) ? base.today.m + "/" + beg + "-" + base.today.m + "/"  + end : beg + "/" + base.today.m + "-" + end + "/" + base.today.m;
 						base.debug.append("(" + o.data[j][o.dataObject[0]] + "), derived range: " + tmp + " ");
 					}
-					if ( base.today.d >= beg && base.today.d <= end ) {
+					if ( tYearStr === yr && base.today.d >= beg && base.today.d <= end ) {
 						if (o.debug) {
 							base.debug.append('<span class="inRange">is in range</span>; image = ' + o.data[j][o.dataObject[1]] + '<br>');
 						}

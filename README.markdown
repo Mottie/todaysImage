@@ -69,6 +69,13 @@ $(image).data('todaysImage').showAll();
 
 ###**Change Log**
 
+####Version 1.1.2
+
+* Fixed a problem with events that cross a year (e.g. 12/31-1/5). It was improperly adding one to the year.
+* Found a problem when including an event that crosses a year boundry using full date strings (12/31/2011-1/5/2012).
+  * The date is improperly parsed and does not work at all.
+  * When I have time, I will just completely rewrite the date comparison code.
+
 ####Version 1.1.1
 
 * Updated to allow adding a specific date.

@@ -1,5 +1,5 @@
 /*
-	todaysImage v1.1.1 (https://github.com/Mottie/todaysImage)
+	todaysImage v1.1.2 (https://github.com/Mottie/todaysImage)
 	By Rob Garrison (aka Mottie & Fudgey)
 	Licensed under the MIT license.
 
@@ -90,14 +90,15 @@
 					dates = datestr.split('-'),
 					d1 = dates[0].split('/'),
 					tMonthStartStr = parseInt(d1[m],10),
-					tMonthEndStr = (typeof(dates[1])=== "undefined") ? tMonthStartStr : parseInt(dates[1].split('/')[m],10),
-					tYearStr = parseInt(d1[2],10) || base.today.y;
+					tMonthEndStr = (typeof(dates[1]) === "undefined") ? tMonthStartStr : parseInt(dates[1].split('/')[m],10),
+					tYearStr = parseInt(d1[2],10) || base.today.y,
+					tYearEnd = (typeof(dates[1]) === "undefined") ? base.today.y : parseInt(dates[1].split('/')[2] || base.today.y, 10);
 					if (tYearStr < 100) { tYearStr += 2000; } // assume two digit year should have 2000 added
 					// if the date range crosses months or years, figure out if we are in range, then just set the month to now
 				if ( (tMonthStartStr > tMonthEndStr) && (base.today.m >= tMonthStartStr || base.today.m <= tMonthEndStr) ) {
 					tMonthStartStr = (tMonthStartStr === base.today.m) ? base.today.m : base.today.m - 1;
 					tMonthEndStr = (tMonthEndStr === base.today.m) ? base.today.m : base.today.m + 1;
-					base.endsNextYear = true;
+					base.endsNextYear = ((base.today.m > tMonthStartStr && base.today.m !== 1) || base.today.y !== tYearEnd ) ? true : false;
 				} else {
 					base.endsNextYear = false;
 				}
